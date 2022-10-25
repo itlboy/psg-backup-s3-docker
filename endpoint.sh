@@ -15,7 +15,7 @@ echo "BACKUP FILE: $BACKUP_FILE"
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt: START DUMP DB"
 
-mysqldump --single-transaction=TRUE -h "$DB_SERVER" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASS" "$DB_NAME" $TABLES | gzip -9 > "$BACKUP_FILE"
+PGPASSWORD="$DB_PASS" pg_dump  -h "$DB_SERVER" -p "$DB_PORT" -U "$DB_USER" "$DB_NAME" | gzip -9 > "$BACKUP_FILE"
 
 du -skh "$BACKUP_FILE";
 dt=$(date '+%d/%m/%Y %H:%M:%S');
