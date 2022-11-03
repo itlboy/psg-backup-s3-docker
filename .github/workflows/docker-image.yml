@@ -35,6 +35,8 @@ jobs:
         context: .
         #platforms: linux/amd64,linux/arm64
         platforms: linux/amd64
+        cache-from: type=registry,ref=itlboy/psg-backup-s3:build-cache
+        cache-to: type=registry,ref=itlboy/psg-backup-s3:build-cache
         push: true
         tags: |
           itlboy/psg-backup-s3
