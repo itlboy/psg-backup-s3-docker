@@ -1,4 +1,4 @@
-FROM 17.5-alpine3.22
+FROM postgres:17.5-alpine3.22
 RUN apk add --no-cache aws-cli
 ADD ./endpoint.sh ./
 RUN chmod +x ./endpoint.sh
