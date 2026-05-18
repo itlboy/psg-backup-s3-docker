@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        pg_version: ["13", "14", "15", "16", "17", "17.5", "15.0"] # Bạn có thể thêm/xóa các phiên bản ở đây
+        pg_version: ["13", "14", "15", "16", "17", "17.5", "15.0","17.2"] # Bạn có thể thêm/xóa các phiên bản ở đây
 
     steps:
     -
